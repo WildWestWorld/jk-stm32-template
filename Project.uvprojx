@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Library;.\Module\Start;.\Module\System</IncludePath>
+              <IncludePath>.\User;.\Library;.\Module\Start;.\Module\System;.\Module\Hardware</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -684,6 +684,21 @@
               <FileName>stm32f10x_it.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\stm32f10x_it.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Module\Hardware\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Module\Hardware\LED.h</FilePath>
             </File>
           </Files>
         </Group>

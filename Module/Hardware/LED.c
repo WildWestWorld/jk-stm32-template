@@ -27,3 +27,35 @@ void LED2_ON(void){
 void LED2_OFF(void){
 	GPIO_SetBits(GPIOA,GPIO_Pin_1);
 }
+
+//按钮 LED状态变更
+void LED1_Turn(void){
+	//如果灯 输出为 低电平 也就是灯点亮的时候 就熄灭
+	//灯熄灭就点亮
+	//GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_1) 读取灯的电平状态
+	if(GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_0)==0){
+		GPIO_SetBits(GPIOA,GPIO_Pin_0);
+		
+	}else{
+		GPIO_ResetBits(GPIOA,GPIO_Pin_0);
+	}
+	
+}
+
+
+//按钮 LED状态变更
+void LED2_Turn(void){
+	//如果灯 输出为 低电平 也就是灯点亮的时候 就熄灭
+	//灯熄灭就点亮
+	//GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_1) 读取灯的电平状态
+	if(GPIO_ReadOutputDataBit(GPIOA,GPIO_Pin_1)==0){
+		GPIO_SetBits(GPIOA,GPIO_Pin_1);
+		
+	}else{
+		GPIO_ResetBits(GPIOA,GPIO_Pin_1);
+	}
+	
+}
+
+
+

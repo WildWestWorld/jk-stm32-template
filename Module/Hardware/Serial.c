@@ -143,7 +143,7 @@ void Serial_Printf(char *format,...){
 
 //处理中断
 void USART1_IRQHandler(void){
-	/*//如果中断开启
+//如果中断开启
 	if(USART_GetITStatus(USART1,USART_IT_RXNE)== SET){
 	//接收数据
 		Serial_RxData =USART_ReceiveData(USART1);
@@ -154,7 +154,7 @@ void USART1_IRQHandler(void){
 		USART_ClearITPendingBit(USART1,USART_IT_RXNE);
 		
 	}
-	*/
+
 	
 	/*//HEX
 	static uint8_t RxState =0;
@@ -189,7 +189,7 @@ void USART1_IRQHandler(void){
 			
 		}*/
 		
-			//Text
+	/*		//Text
 	static uint8_t RxState =0;
 	//记录接收了几个变量 记录了四个就该从状态2变为状态3
 	static uint8_t RxPacketNum = 0;
@@ -233,7 +233,7 @@ void USART1_IRQHandler(void){
 		//清除标志位
 		USART_ClearITPendingBit(USART1,USART_IT_RXNE);
 		
-	}
+	}*/
 	
 	
 }
